@@ -1,0 +1,2 @@
+# Timing constraints
+NET "sysclk" PERIOD=40 ns;

@@ -1,0 +1,28 @@
+# Clocks & debug
+NET "clk50mhz"        LOC="A10" | IOSTANDARD = LVCMOS33;
+
+# Video output
+NET "ro<2>"           LOC="G11"   | IOSTANDARD = LVCMOS33;
+NET "ro<1>"           LOC="F13"   | IOSTANDARD = LVCMOS33;
+NET "ro<0>"           LOC="F14"   | IOSTANDARD = LVCMOS33;
+
+NET "go<2>"           LOC="B16"   | IOSTANDARD = LVCMOS33;
+NET "go<1>"           LOC="C16"   | IOSTANDARD = LVCMOS33;
+NET "go<0>"           LOC="D16"   | IOSTANDARD = LVCMOS33;
+
+NET "bo<2>"           LOC="E12"   | IOSTANDARD = LVCMOS33;
+NET "bo<1>"           LOC="B15"   | IOSTANDARD = LVCMOS33;
+NET "bo<0>"           LOC="C15"   | IOSTANDARD = LVCMOS33;
+
+NET "hsync"           LOC="G12"  | IOSTANDARD = LVCMOS33;
+NET "vsync"           LOC="H16"  | IOSTANDARD = LVCMOS33;
+
+# Sound input/output
+#NET "audio_out_left"  LOC="H11"  | IOSTANDARD = LVCMOS33;
+#NET "audio_out_right" LOC="H13"  | IOSTANDARD = LVCMOS33;
+
+# Keyboard and mouse
+#NET "clkps2"          LOC="M11"  | IOSTANDARD = LVCMOS33 | PULLUP;
+#NET "dataps2"         LOC="P12"  | IOSTANDARD = LVCMOS33 | PULLUP;
+#NET "mouseclk"        LOC="M10"  | IOSTANDARD = LVCMOS33 | PULLUP;
+#NET "mousedata"       LOC="P11"  | IOSTANDARD = LVCMOS33 | PULLUP;
