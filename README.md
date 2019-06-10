@@ -16,18 +16,18 @@ The TLD module interface is as follows:
 module vga_text (
   input wire vclk,   // 25.125 MHz pixel clock (although 25.000 MHz works too and is easier to generate)
 
-// interface video RAM
-	input wire [11:0] addr,
-  input wire [7:0] din,
-  input wire we,
-  output wire [7:0] dout,
+  // interface video RAM
+    input wire [11:0] addr,  // 12 bit address
+    input wire [7:0] din,    // 8 bit input data
+    input wire we,           // synchronous write enable
+    output wire [7:0] dout,  // 8 bit output data. Updated at every clock tick.
 
-// VGA output (1-bit)
-  output reg red,
-  output reg green,
-  output reg blue,
-  output wire hsync,
-  output wire vsync
+  // VGA output (1-bit)
+    output reg red,          // RGB outputs. Should be adapted to drive a VGA monitor.
+    output reg green,        // For a 3.3V output signal, just use a series resistor
+    output reg blue,         // of 270 ohms on each R,G and B output
+    output wire hsync,       // Horizontal sync, negative polarity
+    output wire vsync        // Vertical sync, negative polarity
   );
 ```
 
